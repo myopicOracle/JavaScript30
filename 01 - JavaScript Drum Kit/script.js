@@ -15,9 +15,14 @@
     once observed, execute change CSS function
 
 */
-
+/*
+<div class="keys">
+<div data-key="65" class="key">
+  <kbd>A</kbd>
+*/
 // Reference Concepts & Examples 
 
+/*
     document.querySelectorAll('[data-foo="value"]');
 
     let div = document.getElementById('myDiv');
@@ -46,3 +51,51 @@
     let div = document.getElementById('myDiv');
     let value = div.getAttribute('data-myAttribute');
     console.log(value); // "myValue"
+---------------
+*/
+
+// VERSION --------- Manual Test -------
+
+const keys = document.querySelector(".keys")
+const keyNodeList = document.querySelectorAll(".key")
+
+    //const newArray = Array.from(keyNodeList).map(item => item.setAttribute("class", ".playing")); // this sets .playing's CSS to all nodes in newArray
+
+    //find data-key value
+    //const value = document.getAttribute("data-key")
+
+//Perform action on element after click
+const elementA = document.querySelector("[data-key='65']")
+
+// once elementA is clicked, it's inner CSS should be updated with .player
+
+elementA.addEventListener("click", () => {
+    elementA.setAttribute("style", 
+        "transform: scale(1.1); border-color: #ffc600; box-shadow: 0 0 1rem;")
+});
+
+
+
+
+
+
+
+
+
+
+// VERSION --------- AUTOMATED ------- Incomplete 
+/*
+        const keys = document.querySelector(".keys")
+        const keyNodeList = document.querySelectorAll(".key")
+
+        const newArray = keyNodeList.map(item => item.setAttribute("class", ".playing"));
+
+        //find data-key value
+        const value = document.getAttribute("data-key")
+
+        //Perform action on element after click
+        const element = document.querySelectorAll(`[data-key="${value}"]`)
+
+        find num
+*/
+
