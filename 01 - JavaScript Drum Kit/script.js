@@ -1,101 +1,141 @@
-/* Pseudocode 
+  const keys = document.querySelector(".keys")
+  //const key = document.querySelector(".key")
+  const keyNodeList = document.querySelectorAll(".key")
+  const keyArray = Array.from(keyNodeList)
+  const audioNodes = document.querySelectorAll("audio")
+  const audioArray = Array.from(audioNodes)
 
-    identify and select all keys 
-    turn this selection into array (NodeList)
+  const elementA = document.querySelector("[data-key='65']")
+    const elementS = document.querySelector("[data-key='83']")
+      const elementD = document.querySelector("[data-key='68']")
+        const elementF = document.querySelector("[data-key='70']")
+          const elementG = document.querySelector("[data-key='71']")
+            const elementH = document.querySelector("[data-key='72']")
+              const elementJ = document.querySelector("[data-key='74']")
+                const elementK = document.querySelector("[data-key='75']")
+                  const elementL = document.querySelector("[data-key='76']")
+  
 
-    create function that iterates through array 
-    add class attribute 'playing' to all keys
-    function returns el associated with data-key
 
-    create another function
-    this function changes CSS of Element 
-    it changes it by calling function with .playing
-    
-    set event checkpoint to listen for user action
-    once observed, execute change CSS function
+    /*function playSong(src) {
+      "sounds/clap.wav"
+    }*/
 
-*/
-/*
-<div class="keys">
-<div data-key="65" class="key">
-  <kbd>A</kbd>
-*/
-// Reference Concepts & Examples 
+// the two below are an attemp that hasn't worked yet
+const sound = new Audio()
 
-/*
-    document.querySelectorAll('[data-foo="value"]');
+const playSound = (id) => {
+  const key = audioArray.find((key) => key.id === id);
+  sound.src = key.src;
+  sound.play();
+}
+//==============
 
-    let div = document.getElementById('myDiv');
-    let value = div.dataset.myAttribute;
-    console.log(value); // "myValue"
+const soundClap = document.getElementById("65")
+const soundHiHat = document.getElementById("83")
+const soundKick = document.getElementById("68")
+const soundOpenHat = document.getElementById("70")
+const soundBoom = document.getElementById("71")
+const soundRide = document.getElementById("72")
+const soundSnare = document.getElementById("74")
+const soundTom = document.getElementById("75")
+const soundTik = document.getElementById("76")
 
-    const elements = document.querySelectorAll('[data-your-attribute="your-value"]');
 
-    const div1 = document.getElementById("div1");
-    //=> <div id="div1">Hi Champ!</div>
-
-    const exampleAttr = div1.getAttribute("id");
-    //=> "div1"
-
-    // array
-    permittedValues = array.map(function(value) {
-        return value.key;
-    });
-
-    //using .dataset property
-    let div = document.getElementById('myDiv');
-    let value = div.dataset.myAttribute;
-    console.log(value); // "myValue"
-
-    //using .getAttribute() function
-    let div = document.getElementById('myDiv');
-    let value = div.getAttribute('data-myAttribute');
-    console.log(value); // "myValue"
----------------
-*/
-
-// VERSION --------- Manual Test -------
-
-const keys = document.querySelector(".keys")
-const keyNodeList = document.querySelectorAll(".key")
-
-    //const newArray = Array.from(keyNodeList).map(item => item.setAttribute("class", ".playing")); // this sets .playing's CSS to all nodes in newArray
-
-    //find data-key value
-    //const value = document.getAttribute("data-key")
-
-//Perform action on element after click
-const elementA = document.querySelector("[data-key='65']")
-
-// once elementA is clicked, it's inner CSS should be updated with .player
-
-elementA.addEventListener("click", () => {
+  elementA.addEventListener("click", () => {
     elementA.setAttribute("style", 
-        "transform: scale(1.1); border-color: #ffc600; box-shadow: 0 0 1rem;")
+                          "transform: scale(1.1); border-color: #ffc600; box-shadow: 0 0 1rem;")
+    //document.getElementById("audio[data-key='65']")
+    //playSound(65);
+    soundClap.play()
+
+});   
+  elementS.addEventListener("click", () => {
+    elementS.setAttribute("style", 
+                          "transform: scale(1.1); border-color: #ffc600; box-shadow: 0 0 1rem;")
+    //document.getElementById("audio[data-key='65']")
+    soundHiHat.play();
 });
+  elementD.addEventListener("click", () => {
+    elementD.setAttribute("style", 
+                          "transform: scale(1.1); border-color: #ffc600; box-shadow: 0 0 1rem;")
+    //document.getElementById("audio[data-key='65']")
+    soundKick.play();
+
+});
+  elementF.addEventListener("click", () => {
+    elementF.setAttribute("style", 
+                          "transform: scale(1.1); border-color: #ffc600; box-shadow: 0 0 1rem;")
+    //document.getElementById("audio[data-key='65']")
+    soundOpenHat.play();
+
+});
+  elementG.addEventListener("click", () => {
+    elementG.setAttribute("style", 
+                          "transform: scale(1.1); border-color: #ffc600; box-shadow: 0 0 1rem;")
+    //document.getElementById("audio[data-key='65']")
+    soundBoom.play();
+
+});
+  elementH.addEventListener("click", () => {
+    elementH.setAttribute("style", 
+                          "transform: scale(1.1); border-color: #ffc600; box-shadow: 0 0 1rem;")
+    //document.getElementById("audio[data-key='65']")
+    soundRide.play();
+
+});
+  elementJ.addEventListener("click", () => {
+    elementJ.setAttribute("style", 
+                          "transform: scale(1.1); border-color: #ffc600; box-shadow: 0 0 1rem;")
+    //document.getElementById("audio[data-key='65']")
+    soundSnare.play();
+
+});
+  elementK.addEventListener("click", () => {
+    elementK.setAttribute("style", 
+                          "transform: scale(1.1); border-color: #ffc600; box-shadow: 0 0 1rem;")
+    //document.getElementById("audio[data-key='65']")
+    soundTom.play();
+
+});
+  elementL.addEventListener("click", () => {
+    elementL.setAttribute("style", 
+                          "transform: scale(1.1); border-color: #ffc600; box-shadow: 0 0 1rem;")
+    //document.getElementById("audio[data-key='65']")
+    soundTik.play();
+
+});
+  
+  
+  
+  
+/* elementA.addEventListener("click", () => {
+    elementA.setAttribute("style", 
+                          "transform: scale(1.1); border-color: #ffc600; box-shadow: 0 0 1rem;")
+});  */
 
 
-
-
-
-
-
-
-
-
-// VERSION --------- AUTOMATED ------- Incomplete 
 /*
-        const keys = document.querySelector(".keys")
-        const keyNodeList = document.querySelectorAll(".key")
+const elementAny = document.querySelector(`[data-key="${value}"]`)
 
-        const newArray = keyNodeList.map(item => item.setAttribute("class", ".playing"));
+value = Array.from(keyNodeList).getAttribute("data-key")
 
-        //find data-key value
-        const value = document.getAttribute("data-key")
 
-        //Perform action on element after click
-        const element = document.querySelectorAll(`[data-key="${value}"]`)
-
-        find num
+elementAny.addEventListener("click", () => {
+    elementAny.setAttribute("style", 
+                          "transform: scale(1.1); border-color: #ffc600; box-shadow: 0 0 1rem;")
+});
 */
+  
+/*
+something with that data value
 
+
+value = Array.from(keyNodeList).getAttribute("data-key")
+
+keyNodeList.find(something with that data value)
+  
+  function
+    
+    */
+    
