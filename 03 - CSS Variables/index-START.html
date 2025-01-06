@@ -10,7 +10,7 @@
 
   <div class="controls">
     <label for="spacing">Spacing:</label>
-    <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+    <input id="spacing" type="range" name="spacing" min="10" max="200" value="20" data-sizing="px">
 
     <label for="blur">Blur:</label>
     <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
@@ -19,13 +19,18 @@
     <input id="base" type="color" name="base" value="#ffc600">
   </div>
 
-  <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
+  <img src="https://images.unsplash.com/photo-1733422919430-1d1c015bc31f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzNHx8fGVufDB8fHx8fA%3D%3D">
 
   <style>
 
     /*
       misc styles, nothing to do with CSS variables
     */
+
+    :root {
+      --spacing: 20px;
+      --base: gold;
+    }
 
     body {
       text-align: center;
@@ -43,10 +48,29 @@
     input {
       width: 100px;
     }
+
+    img {
+      padding: var(--spacing);
+      background-color: var(--base);
+      
+    }
+
+    #spacing {
+      
+    }
+
+    #blur {
+
+    }
+
+    #base {
+      /* color: var(--base); */
+    }
+
   </style>
 
   <script>
   </script>
-
+  <script src="./script_GX.js"></script>
 </body>
 </html>
