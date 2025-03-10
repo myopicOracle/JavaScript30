@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link rel="icon" href="/assets/shiba-inu-favicon-BPJSFY68.ico" />
+  <link rel="stylesheet" crossorigin href="/assets/index-B3673nJO.css">
+</head>
+<body>
+
+  <div id="disclaimer">Press a key to play the drums!</div>
+
+  <div class="keys">
+    <div data-key="65" class="key">
+      <kbd>A</kbd>
+      <span class="sound">clap</span>
+    </div>
+    <div data-key="83" class="key">
+      <kbd>S</kbd>
+      <span class="sound">hihat</span>
+    </div>
+    <div data-key="68" class="key">
+      <kbd>D</kbd>
+      <span class="sound">kick</span>
+    </div>
+    <div data-key="70" class="key">
+      <kbd>F</kbd>
+      <span class="sound">openhat</span>
+    </div>
+    <div data-key="71" class="key">
+      <kbd>G</kbd>
+      <span class="sound">boom</span>
+    </div>
+    <div data-key="72" class="key"> 
+      <kbd>H</kbd>
+      <span class="sound">ride</span>
+    </div>
+    <div data-key="74" class="key">
+      <kbd>J</kbd>
+      <span class="sound">snare</span>
+    </div>
+    <div data-key="75" class="key">
+      <kbd>K</kbd>
+      <span class="sound">tom</span>
+    </div>
+    <div data-key="76" class="key">
+      <kbd>L</kbd>
+      <span class="sound">tink</span>
+    </div>
+  </div>
+
+  <audio data-key="65" id="65" src="/assets/clap-DCEqjqho.wav"></audio>
+  <audio data-key="83" id="83" src="/assets/hihat-BQJEh-bt.wav"></audio>
+  <audio data-key="68" id="68" src="/assets/kick-CEXGmQ03.wav"></audio>
+  <audio data-key="70" id="70" src="/assets/openhat-B1Qhc5jG.wav"></audio>
+  <audio data-key="71" id="71" src="/assets/boom-yaDpdAcJ.wav"></audio>
+  <audio data-key="72" id="72" src="/assets/ride-B7XUAREi.wav"></audio>
+  <audio data-key="74" id="74" src="/assets/snare-BJhmBksI.wav"></audio>
+  <audio data-key="75" id="75" src="/assets/tom-BtpzJ72j.wav"></audio>
+  <audio data-key="76" id="76" src="/assets/tink-BA3ywrs2.wav"></audio>
+
+  <script src="./script.js"></script>
+
+</body>
+</html>
