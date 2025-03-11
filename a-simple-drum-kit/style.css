@@ -52,8 +52,8 @@ kbd {
 
 #disclaimer {
   position: absolute;
-  top: 35%;
-  left: 8%;
+  bottom: 25%;
+  left: 42%;
   color: #ffc600;
   text-shadow: 0 0 .5rem black;
   font-size: 1.5rem;
